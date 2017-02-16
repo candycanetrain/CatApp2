@@ -1,0 +1,8 @@
+
+<h1>Your info</h1>
+
+<% @users.each do |user| %>
+  <%= user.user_name %>
+  <%= user.session_token %>
+<br>
+  <% end %>

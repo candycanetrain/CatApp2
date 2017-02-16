@@ -9,10 +9,12 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'bcrypt'
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'spring'
   gem 'pry-rails'
+
 end

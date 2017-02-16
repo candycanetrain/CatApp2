@@ -6,7 +6,21 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
+<header>
+  <% if current_user %>
+    <%= current_user.user_name %>
+    <%= button_to("Log Out", "/session", method: :delete) %>
+  <% else %>
+    <%= button_to("Log In", new_session_url, method: :get) %>
+  <% end %>
+
+</header>
+
 <body>
+
+<%= render "shared/errors" %>
+
 
 <%= yield %>
 
