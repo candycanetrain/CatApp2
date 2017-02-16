@@ -13,10 +13,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      fail
       login_user!(@user)
     else
       flash[:errors] = @user.errors.full_messages
-      render :new
+      redirect_to new_user_url
     end
   end
 

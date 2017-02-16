@@ -2,7 +2,7 @@
 
 
 <form action="<%= session_url %>" method="post">
-
+<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
   <label for="user_name">Input Username: </label>
   <input id = "user_name" type="text" name="session[user_name]" >
 
